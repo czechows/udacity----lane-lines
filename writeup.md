@@ -43,21 +43,21 @@ The averaging was done  by taking the mean over the set of the top and the botto
 The extension was performed by computing the slope and the intercept of the aggregate line, and using these to recalculate
 the desired end points (y=slope \* x + intercept). 
 
-8a. As an additional feature of the draw_lines function, a global variable linesG was stored. If there are at least two lines to average at a given time step,
+9. As an additional feature of the draw_lines function, a global variable linesG was stored. If there are at least two lines to average at a given time step,
 then linesG was updated with the aggregate line of the time step. If there was only one or zero lines to average,
 then averaging was not performed, and instead the most recent value of linesG served as a guess for the postion of the lines.
 The purpose of this feature was to stabilize the algorithm, so it will not crash if the Hough transform outputs zero lines,
 and so it will not propose a "bogus lane line" in case the Hough transform outputs one line, which may be an artifact of other white objects in the image.
 The underlying assumption behind this feature is that the video is continuous, so the lane line from the previous time step is a reasonable substitute.
 
-9. The left lane line and the right lane line are merged to a single image, and then superimposed over the original image (using the weighted_img function).
+10. The left lane line and the right lane line are merged to a single image, and then superimposed over the original image (using the weighted_img function).
 
 
 
 
 ###2. Identify potential shortcomings with your current pipeline
 
-The line memory feature described in 8a has two shortcomings. First one is that it relies on a global variable.
+The line memory feature described in 9 has two shortcomings. First one is that it relies on a global variable.
 The second one, is that it relies on the fact that the first image in the stream correctly identified the lane lines.
 
 The polygonal masks are quite narrow. This yields accurate results for a car already driving on a lane,

@@ -3,6 +3,28 @@
 
 <img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 
+
+
+Assignment script
+---
+
+The goal of the project is to find lane lines on videos recorded by a camera placed in front of a vehicle travelling on a highway.
+
+The jupyter notebook P1.ipynb analyzes the videos provided in the test_videos directory, and superimposes the detected position
+of the lane lines. The superimposed videos are saved to the test_videos_output directory. 
+
+For correct execution, python3 and the opencv library is required.
+
+Parts of the script were provided by Udacity as a starting point for the project.
+
+Parts of the script were written by myself.
+
+The details of the algorithm are provided in the writeup.md file, created by myself.
+
+Below, I attach the overview of the assignment by Udacity.
+
+czechows
+
 Overview
 ---
 
